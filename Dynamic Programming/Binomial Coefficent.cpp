@@ -3,9 +3,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-//
-/*Recursive solution
- int binomialCoeff(int n,int k)
+//Recursive solution
+/*int binomialCoeff(int n,int k)
  {
      if(n==k || k==0)
          return 1;
