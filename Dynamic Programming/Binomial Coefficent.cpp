@@ -34,8 +34,7 @@ int binomialCoeff(int n,int k)
 }
 int main()
 {
-    int n,k;
-    cin>>n>>k;
+    int n=4,k=2;
     cout<<binomialCoeff(n,k);
     return 0;
 }
