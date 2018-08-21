@@ -52,4 +52,5 @@ int main()
 {
    int n=5 , k=3;   //n is the nth  stair and k=3 means that it can take 1 , 2 , 3 Jumps per step  
    countways(n,k);
+   
 }
