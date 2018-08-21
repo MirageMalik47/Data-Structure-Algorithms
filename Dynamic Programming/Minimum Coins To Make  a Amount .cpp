@@ -26,15 +26,15 @@ int Min_Number_of_Coins(int *arr,int coins,int amount)
 
 int main()
 {
-	  int amount,coins;
-	  cin>>amount>>coins;
+     int amount,coins;
+     cin>>amount>>coins;
 	  
-	  int *arr=new int [coins];
-	  for(int i=0;i<coins;i++)
-	   cin>>arr[i];
+     int *arr=new int [coins];
+     for(int i=0;i<coins;i++)
+      cin>>arr[i];
 	  
-	  cout<<Min_Number_of_Coins(arr,coins,amount);
-	  
-	  delete []arr;
-	return 0;
+     cout<<Min_Number_of_Coins(arr,coins,amount);
+     
+     delete []arr;
+     return 0;
 }
