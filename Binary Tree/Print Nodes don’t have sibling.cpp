@@ -1,5 +1,5 @@
 /* print all the nodes separated by space which don't have sibling in the tree in sorted order if every node has a tree than print -1.*/
-
+/*  A sibling is a brother or a sister */
 void help(Node *root , vector<int> &v)
 {
     if(root == NULL)
