@@ -1,3 +1,5 @@
+/************ Time Comp O(n) ****************/
+
 Node<int> *rotate( Node<int> *start, int p)
 {
     int count=0;
@@ -29,4 +31,30 @@ Node<int> *rotate( Node<int> *start, int p)
         extra->next=start;
         return x;
     }
+}
+
+
+/*************** Time Comp O(n) *************/
+void rotate(struct node **head_ref, int k)
+{ 
+  Node*temp=*head_ref;
+  Node*start=*head_ref;
+  if(!temp || k==0)
+    return;
+  for(int i=1;i<k;i++)
+  {
+      if(temp->next->next==NULL)
+        return;
+      else
+         temp=temp->next;
+  }
+   (*head_ref)=temp->next;
+   temp->next=NULL;
+   temp=(*head_ref);
+   while(temp->next!=NULL)
+   {
+      temp=temp->next;
+   }
+   temp->next=start;
+   return;
 }
