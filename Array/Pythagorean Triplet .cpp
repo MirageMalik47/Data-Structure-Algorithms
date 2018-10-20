@@ -6,6 +6,7 @@ Approach :
  3. To find a triplet (a, b, c) such that a^2 + b^2 = c^2
 */
 
+/***************** Time Comp : O(n^2) ************/
 bool Pythagorean_Triplet(int *arr , int n)
 {
    sort(arr,arr+n);
