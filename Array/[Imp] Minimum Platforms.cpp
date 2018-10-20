@@ -3,7 +3,7 @@
 //Note: Consider that all the trains arrive on the same day and leave on the same day. 
 //Also, arrival and departure times must not be same for a train.
 
-/************************* Time Comp : O(n) ************************/
+/************************* Time Comp : O(nlogn) possibly ************************/
 
 int findPlatform(int arr[], int dep[], int n) 
 { 
