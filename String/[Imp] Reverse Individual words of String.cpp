@@ -4,20 +4,27 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+void singlewordreverse( string x)
+{
+    int start=0 , end=x.size()-1;
+    while(start<end)
+    {
+        swap(x[start],x[end]);
+        start++;
+        end--;
+    }
+    cout<<x<<" ";
+}
+
 void  ReverseWordstring(string s)
 {
-    stack <string> p ;
     istringstream x(s);
     while(x)
     {
         string word ;
         x >> word ;
-        p.push(word);
-    }
-    while( !p.empty() )
-    {
-        cout<<p.top()<<" ";
-        p.pop();
+        singlewordreverse( word );
     }
 }
 int main()
