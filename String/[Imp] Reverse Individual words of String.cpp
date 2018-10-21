@@ -65,3 +65,37 @@ void reverseWords(string s)
     }
 } 
 
+/************************** Time Comp : O(n) and Changes in Orginal Array ********************************/
+
+void reverseWords(string s) 
+{ 
+    int start=0 ;
+    for(int i=0 ;i<= s.size() ;i++)
+    {
+        if(s[i] == ' ')
+        {
+            int x = start , y=i-1;
+            while(x < y)
+            {
+                swap(s[x],s[y]);
+                x++;
+                y--;
+            }
+            start=i+1;
+        }
+        else if ( i == s.size())  // For Last Word
+        {
+            int x = start , y=i-1;
+            while(x < y)
+            {
+                swap(s[x],s[y]);
+                x++;
+                y--;
+            }
+            start=i+1;
+        }
+    }
+    
+    cout<< s;
+}
+
