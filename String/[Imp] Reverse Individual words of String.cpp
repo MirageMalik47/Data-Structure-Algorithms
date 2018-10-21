@@ -6,12 +6,18 @@ using namespace std;
 
 void  ReverseWordstring(string s)
 {
+    stack <string> p ;
     istringstream x(s);
     while(x)
     {
         string word ;
         x >> word ;
-        cout << word <<" ";
+        p.push(word);
+    }
+    while( !p.empty() )
+    {
+        cout<<p.top()<<" ";
+        p.pop();
     }
 }
 int main()
