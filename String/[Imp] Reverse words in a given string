@@ -1,0 +1,40 @@
+
+//It only print string in reverse order wordwise , No change in Orginal String
+/********************* Time Comp : O(n) ********************/
+void reversestring(string s)
+{
+    int i, count=0;
+    for(i=s.size()-1 ;i>0;i--)
+    {
+        if(s[i]=='.')
+        {
+            cout<<s.substr(i+1,count);
+            cout<<".";
+            count=0;
+        }
+        else
+        {
+            count++;
+        }
+    }
+    cout<<s.substr(i,count+1);           //for last word
+}
+
+/************************* Time Comp : O(n) and Space Comp : O(n) *************/
+
+void reverseWords(string s) 
+{ 
+    stack <string> p;
+    istringstream x(s);
+    while(x)
+    {
+        string word;
+        x >> word ;
+        p.push( word ); 
+    }
+    while(!p.empty())
+    {
+        cout<<p.top()<<" ";
+        p.pop();
+    }    
+} 
