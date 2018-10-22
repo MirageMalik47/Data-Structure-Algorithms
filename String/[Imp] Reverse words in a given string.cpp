@@ -1,18 +1,24 @@
-
 /*
 Approach: ( Example : "i like this program very much")
-1. Reverse the individual words and put dot('.') in place of Space (' ')we get the below string.
-  "i.ekil.siht.margorp.yrev.hcum"
-2. Reverse the whole string from start to end and put Space(' ') in place of dot ('.') and you get the desired output.
-     "much very program this like i"
-     
+1. Reverse the whole string from start to end .
+     "hcum yrev margrop siht ekil i"
+2. Reverse the individual words 
+     "much very program this like i"     
 */     
 /*************************** Time Comp : O(n) and Change in Orginal String***********************/
 
-void  reverseWords(string s)
+
+void  reversestring(string s)
 {
-// Reverse the individual words and put dot('.') in place of Space (' ')
-    int start=0 ;
+    int start=0,end=s.size()-1;
+    while( start < end)
+    {
+        swap(s[start],s[end]);
+        start++;
+        end--;
+    }
+
+    start=0 ;
     for(int i=0 ;i<= s.size() ;i++)
     {
         if(s[i] == ' ')
@@ -25,7 +31,6 @@ void  reverseWords(string s)
                 y--;
             }
             start=i+1;
-            s[i]='.';
         }
         else if ( i == s.size())  // For Last Word
         {
@@ -37,27 +42,11 @@ void  reverseWords(string s)
                 y--;
             }
             start=i+1;
-            s[i]='.';
         }
     }
-// Reverse the whole string from start to end and put Space(' ')
-    int x = 0, y=s.size()-1;
-    while(x < y)
-    {
-        swap(s[x],s[y]);
-         x++;
-         y--;
-    }
     
-    for(int i=0 ; i < s.size() ;i++)
-    {
-        if(s[i] == '.')
-          s[i] = ' ' ;
-    }
-    cout<<s;        
+    cout<< s;
 }
-
-
 
 //It only print string in reverse order wordwise , No change in Orginal String
 /********************* Time Comp : O(n) ********************/
