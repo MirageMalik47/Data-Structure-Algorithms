@@ -12,6 +12,9 @@ Output: Minimum 2 coins required
 We can use one coin of 6 cents and 1 coin of 5 cents
 
 */
+
+/******************************** Time Comp : O(n*amount) ************************/
+
 #include<bits/stdc++.h>
 using namespace std;
 
