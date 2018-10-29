@@ -1,7 +1,7 @@
 # Data-Structure-Algorithms
-1.Dynamic Programming <br> 
-2.Binary Tree <br> 
-3.Binary Search Tree <br> 
-4.Linked List <br> 
-5.Array <br>
-6.String <br>
+1. Dynamic Programming <br> 
+2. Binary Tree <br> 
+3. Binary Search Tree <br> 
+4. Linked List <br> 
+5. Array <br>
+6. String <br>
