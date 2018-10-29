@@ -3,8 +3,8 @@ Dynamic Programming can be used to find the longest common substring in O(m*n) t
 The idea is to find length of the longest common suffix for all substrings of both strings and store these lengths in a table.
 1.) if( i == 0 || j == 0)
       X[i]Y[j] = 0 ;
-2.) if (X[i] == Y[j])
-       X[i]Y[j] = X[i-1]Y[j-1
+2.) if (X[i-1] == Y[j-1])
+       X[i]Y[j] = X[i-1]Y[j-1] + 1 ;
 3.) else 
        X[i]Y[j] = 0 ;
 */
