@@ -1,43 +1,37 @@
 /************************ Time Comp : O(n) ***************/
 
-int  index (char ch)
+int table(char ch)
 {
-  if(ch=='I')
-    return 1;
-  if(ch=='V')
-    return 5;
-  if(ch=='X')
-    return 10;
-  if(ch=='L')
-    return 50;
-  if(ch=='C')
-    return 100;
-  if(ch=='D')
-    return 500;
-  if(ch=='M')
-    return 1000;
-
-   else
-    return 0;
+    if(ch=='I')
+     return 1;
+    if(ch=='V')
+     return 5;
+    if(ch=='X')
+     return 10;
+    if(ch=='L')
+     return 50;
+    if(ch=='C')
+     return 100;
+    if(ch=='D')
+     return 500;
+    if(ch=='M')
+     return 1000;
+    else
+     return 0 ;
 }
-
-void romontointeger(string s)
+int roman_to_int(string s)
 {
-    int sum=0;
-    int i=0;
-    while( i<s.size() )
+    int ans = 0;
+    for(int i=0 ; i<s.size() ;i++)
     {
-        if( index(s[i]) >= index(s[i+1]))
+        if( table(s[i]) < table(s[i+1]) )
         {
-            sum += index(s[i]);
-        }
-        else
-        {
-            sum += index(s[i+1]) - index(s[i]);
+            ans += table(s[i+1]) - table(s[i]) ;
             i++;
-        }
-        i++;
+        }  
+        else 
+          ans += table(s[i]) ;
     }
-    cout<<sum;
+    return ans ;
 }
  
