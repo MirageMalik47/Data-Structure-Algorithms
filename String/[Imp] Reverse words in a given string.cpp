@@ -5,6 +5,22 @@ Approach: ( Example : "i like this program very much")
 2. Reverse the individual words 
      "much very program this like i"     
 */     
+
+//Python 
+
+s = input()
+words = s.split(" ")
+ans = []
+
+for i in words:
+  ans.insert(0,i)
+
+for i in ans:
+  print(i,end=" ")
+
+
+//C++
+
 /*************************** Time Comp : O(n) and Change in Orginal String***********************/
 
 
@@ -87,3 +103,5 @@ void reverseWords(string s)
         p.pop();
     }    
 } 
+
+
