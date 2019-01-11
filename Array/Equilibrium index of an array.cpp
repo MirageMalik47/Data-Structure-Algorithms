@@ -3,6 +3,7 @@
 
 /************** Time Comp : O(n) **************/
 
+// C++
 int equilibrium(int arr[], int n) 
 {
   int sum=0;
@@ -21,3 +22,18 @@ int equilibrium(int arr[], int n)
   }
   return -1;
 }
+
+// Python
+def Equilibrium (l,n):
+	leftsum,rightsum = 0,0
+
+	for i in range(n):
+  		rightsum += l[i]
+
+	for i in range(n):
+  		rightsum -= l[i]
+  		if(leftsum == rightsum):
+   			 return i
+  		else:
+  			 leftsum += l[i]
+	return -1  
