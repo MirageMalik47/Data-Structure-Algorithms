@@ -8,6 +8,7 @@ for both arrays. Whenever we see a common point, we compare the two sums and add
 
 /************************* Time Comp : O(n+m) *********************/
 
+//C++
 long maxPathSum(int ar1[], int ar2[], int m, int n)
 {
     int i = 0, j = 0; 
@@ -45,3 +46,33 @@ long maxPathSum(int ar1[], int ar2[], int m, int n)
   
     return result;       
 }    
+
+
+//Python 
+
+def Max_Sum_Path(arr1,n1,arr2,n2):
+  i,j,sum1,sum2,ans = 0,0,0,0,0
+  while (i < n1 and j < n2):
+    if (arr1[i] < arr2[j]):
+      sum1 += arr1[i]
+      i += 1
+    elif (arr1[i] > arr2[j]):
+      sum2 += arr2[j]
+      j += 1
+    elif (arr1[i] == arr2[j]):
+      ans += max(sum1,sum2)
+      sum1,sum2 = 0,0
+      while (i < n1 and j < n2 and arr1[i] == arr2[j]):      
+        ans += arr1[i]
+        i += 1
+        j += 1
+  
+  while( i < n1):
+    sum1 += arr1[i]
+    i += 1
+  while( j < n2):
+    sum2 += arr2[j]
+    j += 1
+    
+  ans += max(sum1,sum2)
+  return ans
