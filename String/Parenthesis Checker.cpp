@@ -14,7 +14,7 @@ bool checkBalanced( string exp)
     }
     else if(exp[i]==')'||exp[i]==']'||exp[i]=='}')
     {
-        if(s.empty() && ( exp[i]==')' || exp[i]==']' || exp[i]=='}') )
+        if( s.empty() )
           return false;
         
        s.pop();
