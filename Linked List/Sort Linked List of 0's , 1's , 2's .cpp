@@ -1,4 +1,4 @@
-
+/********************** Time Comp: O(n) ****************/ 
 
 void sortList(Node *head)
 {
