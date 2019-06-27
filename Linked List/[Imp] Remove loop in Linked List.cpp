@@ -34,7 +34,7 @@ void removeTheLoop(Node *head)
             slow=slow->next;
             fast=fast->next;
         }
-        while(slow==fast->next)
+        while(slow!=fast->next)
         {
             fast=fast->next;
         }
