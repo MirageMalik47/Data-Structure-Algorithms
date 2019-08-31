@@ -30,4 +30,4 @@ void leftView(Node* root)
           q.push(current->right);
     }
   }
-}
+} 
