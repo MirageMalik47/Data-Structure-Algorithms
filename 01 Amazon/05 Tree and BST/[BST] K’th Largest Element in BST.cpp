@@ -30,8 +30,8 @@ void inorder(Node* root,vector<int> &v)
   if(root == NULL)
     return ;
   
-   inorder(root->right,v);
-   v.push_back(root->key);
+   inorder(root->right,v);     //For Largest Right First
+   v.push_back(root->data);
    inorder(root->left,v);  
 }
 void kthLargest(Node *root, int k)
