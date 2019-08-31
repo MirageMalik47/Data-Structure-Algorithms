@@ -11,6 +11,7 @@ void mirror(Node* root)
     root->left=root->right;
     root->right=temp;
     
+    mirror(root->left) ; 
     mirror(root->right) ;
-    mirror(root->left) ;    
+       
 }
