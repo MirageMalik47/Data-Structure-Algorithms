@@ -18,13 +18,13 @@ void printSingles(struct node *root)
     
     else if (root->right != NULL)         // If left child is NULL and right is not, print right child and recur for right child 
     { 
-        cout << root->right->key << " "; 
+        cout << root->right->data; 
         printSingles(root->right); 
     } 
 
     else if (root->left != NULL)         // If right child is NULL and left is not, print left child and recur for left child 
     { 
-        cout << root->left->key << " "; 
+        cout << root->left->data; 
         printSingles(root->left); 
     } 
 }
