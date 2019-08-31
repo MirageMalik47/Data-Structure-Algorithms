@@ -7,7 +7,7 @@ void kthLargestUtil(Node *root, int k, int &c)
     if (root == NULL || c >= k) 
         return; 
     
-    kthLargestUtil(root->right, k, c);    //so that the largest element is visited first 
+    kthLargestUtil(root->right, k, c);    //For Largest Right First
     
     if (++c == k) 
     { 
