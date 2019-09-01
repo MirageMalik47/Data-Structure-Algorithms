@@ -1,13 +1,17 @@
-Problem Statement  : https://practice.geeksforgeeks.org/problems/array-to-bst/0
+Problem Statement  : https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/
 
 /************************* Time Comp : O(n) **********************/
 
-void array_to_BST(int *arr,int start,int end)
-{
-    if(start > end)
-     return ;
-    int i = (end+start)/2;
-    cout<<arr[i]<<" ";
-    array_to_BST( arr, start, i - 1);
-    array_to_BST( arr, i + 1 , end);
-}
+Node* sortedArrayToBST(int arr[], int start, int end) 
+{ 
+	if (start > end) 
+	return NULL; 
+    
+	int mid = (start + end)/2;         /* Get the middle element and make it root */
+	Node *root = new Node(arr[mid]); 
+    
+	root->left = sortedArrayToBST(arr, start, mid - 1);  // Recursively construct the left subtree and make it left child of root 
+	root->right = sortedArrayToBST(arr, mid + 1, end);   // Recursively construct the right subtree and make it right child of root 
+    
+	return root; 
+} 
