@@ -8,14 +8,15 @@ You are given a number N. You have to find the number of operations required to 
 
 int Minimum_Operations(int n)
 {
-	int dp[n+1];
-	dp[0] = 0;
+  int dp[n+1];
+  dp[0] = 0;
 	    
   for(int i = 1; i <= n; i++)
-	if(i % 2)
-     dp[i] = dp[i-1] + 1;
-	else
-     dp[i] = dp[i/2] + 1;
-     
+  {
+     if(i % 2)
+       dp[i] = dp[i-1] + 1;
+     else
+       dp[i] = dp[i/2] + 1;
+  }  
 	return dp[n];      
 }
