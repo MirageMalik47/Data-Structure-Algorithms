@@ -16,7 +16,7 @@ int egg_drop(int N,int K)
     for(j=0;j<=N;j++)
     {
         dp[0][j]=0;
-        dp[1][j]=1;
+        dp[1][j]=J;
     }
     
     for(i=2;i<=K;i++)
